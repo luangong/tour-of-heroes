@@ -1,12 +1,14 @@
 import { TestBed, async } from '@angular/core/testing';
 import { FormsModule    } from '@angular/forms';
 import { AppComponent   } from './app.component';
+import { HeroDetailComponent } from './hero-detail.component';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [
-        AppComponent
+        AppComponent,
+        HeroDetailComponent,
       ],
       imports: [
         FormsModule
