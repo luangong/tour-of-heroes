@@ -1,18 +1,21 @@
-import { TestBed, async } from '@angular/core/testing';
-import { FormsModule    } from '@angular/forms';
-import { AppComponent   } from './app.component';
+import { TestBed, async  } from '@angular/core/testing';
+import { FormsModule     } from '@angular/forms';
+
+import { AppComponent        } from './app.component';
+import { HeroesComponent     } from './heroes.component';
 import { HeroDetailComponent } from './hero-detail.component';
+import { HeroService         } from './hero.service';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [
         AppComponent,
+        HeroesComponent,
         HeroDetailComponent,
       ],
-      imports: [
-        FormsModule
-      ]
+      imports: [FormsModule],
+      providers: [HeroService],
     }).compileComponents();
   }));
 
